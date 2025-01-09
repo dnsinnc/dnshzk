@@ -1,0 +1,51 @@
+﻿
+{
+  "navmenu":{
+    "home": "home",
+    "my-skills": "my skills",
+    "about-me": "about me",
+    "projects": "projects",
+    "contacts": "contacts"
+  },
+  "main": {
+    "name": "Denys is a",
+    "subtitle": "He crafts responsive where technologies meet creativity"
+  },
+  "skills": {
+    "title": "my skills",
+    "exp": "I've had experiences with",
+    "years-exp": "I have years of experience with",
+    "study": "I work and study about"
+  },
+  "about-me": {
+    "title": "about me",
+    "name": "Hello, I'm Denys!",
+    "subtitle": " I'm a front-end developer currently living in Dobrodzien, Poland, originally from Ukraine. I can design responsive websites from scratch and turn them into modern user-friendly web resources.",
+    
+    "text": {
+      "first": {
+        "part1": " I have a passion for designing accessible and flawless user interfaces. At the moment, I'm actively practicing, developing my own projects for my ",
+        "part2": "and also participating in commercial projects. In particular, I create and maintain front-end components that ensure the smooth operation of the platform, taking into account web accessibility standards."
+      },
+      "second": "  My journey in front-end development began in 2022, and since then I have been actively improving my skills on my own.",
+      "third": " In my free time, I study English and Polish, love reading books, and continue to improve my front-end development skills, as it gives me great pleasure. I also listen to music all the time."
+    }
+  },
+  "projects":{
+    "titles": {
+      "title": "projects",
+      "personal": "My Personal",
+      "comm": "For clients"
+    },
+    "description": {
+      "ecomm": "A multi-page online store using a freely available api, with authentication and your own account. (Still under development)",
+      "portfolio": "My personal web-portfolio.",
+      "vis-cap": "Simple landing. My first experience with Tailwind CSS",
+      "LH": "A commercial project for ordering hosting, multi-page with localization and adaptive."
+    },
+    "liveDemo": "Live Demo"
+  },
+  "contacts": {
+    "title": "contacts"
+  }
+}

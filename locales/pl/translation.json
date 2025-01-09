@@ -1,0 +1,52 @@
+﻿
+{
+  "navmenu": {
+    "home": "strona główna",
+    "my-skills": "moje umiejętności",
+    "about-me": "o mnie",
+    "projects": "projekty",
+    "contacts": "kontakt"
+  },
+  "main": {
+    "name": "Denys to",
+    "subtitle": "Tworzy responsywne strony, gdzie technologie spotykają się z kreatywnością"
+  },
+  "skills": {
+    "title": "moje umiejętności",
+    "exp": "Mam doświadczenie z",
+    "years-exp": "Mam lata doświadczenia w",
+    "study": "Pracuję i uczę się na temat"
+  },
+  "about-me": {
+    "title": "o mnie",
+  
+    "name": "Cześć, jestem Denys!",
+    "subtitle": "Jestem front-end developerem mieszkającym obecnie w Dobrodzieniu, w Polsce, pochodzę z Ukrainy. Potrafię projektować responsywne strony internetowe od podstaw i zamieniać je w nowoczesne, przyjazne użytkownikowi zasoby.",
+
+    "text": {
+      "first": {
+        "part1": " Pasjonuję się projektowaniem dostępnych i perfekcyjnych interfejsów użytkownika. Obecnie aktywnie praktykuję, rozwijając własne projekty na moim ",
+        "part2": "oraz uczestnicząc w projektach komercyjnych. Tworzę i utrzymuję komponenty front-endowe, które zapewniają płynne działanie platformy, uwzględniając standardy dostępności internetowej."
+      },
+      "second": " Moja przygoda z front-endem rozpoczęła się w 2022 roku i od tamtej pory aktywnie rozwijam swoje umiejętności samodzielnie.",
+      "third": " W wolnym czasie uczę się języków angielskiego i polskiego, uwielbiam czytać książki i nieustannie doskonalę swoje umiejętności w zakresie front-end developmentu, co sprawia mi ogromną radość. Cały czas słucham też muzyki."
+    }
+  },
+  "projects": {
+    "titles": {
+      "title": "projekty",
+      "personal": "Moje osobiste",
+      "comm": "Dla klientów"
+    },
+    "description": {
+      "ecomm": "Wielostronicowy sklep internetowy wykorzystujący publicznie dostępne API, z uwierzytelnianiem i własnym kontem. (Wciąż w trakcie tworzenia)",
+      "portfolio": "Moje osobiste portfolio internetowe",
+      "vis-cap": "Prosty landing. Moje pierwsze doświadczenie z Tailwind CSS",
+      "LH": "Projekt komercyjny do zamawiania hostingu, wielostronicowy z lokalizacją i responsywnością."
+    },
+    "liveDemo": "Demo na żywo"
+  },
+  "contacts": {
+    "title": "kontakt"
+  }
+}
