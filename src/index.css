@@ -17,8 +17,29 @@ body{
     transition: background-color 200ms linear, border-color 200ms linear;
 }
 
+body::-webkit-scrollbar {
+    width: 10px; /* Ширина скролу */
+    
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-bar); 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll); 
+    border: 2px solid var(--scroll); 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-bar-hover); 
+    border: 2px solid var(--scroll-bar-hover);
+}
+
+
+
 .header{
-   @apply fixed  top-0 left-0 w-full h-[60px]  bg-white/10 backdrop-blur-md shadow-lg z-50
+   @apply fixed px-[20px] top-0 left-0 w-full h-[60px]  bg-white/10 backdrop-blur-md shadow-lg z-50
 }  
 
 .page {
@@ -103,6 +124,7 @@ body{
     pointer-events: none;
     z-index: -10;
     opacity: 0;
+    @apply md:flex hidden
 }
 
 .card:hover:before{
@@ -186,6 +208,9 @@ html[data-theme='dark']{
     --color: white;
     --text-color: #cfcfcf;
     --cursor-effect-color: radial-gradient(circle, rgba(188, 188, 188, 0.4), transparent, transparent);
+    --scroll: gray;
+    --scroll-bar: black;
+    --scroll-bar-hover: #353535;
 
 }
 
@@ -196,8 +221,11 @@ html[data-theme='light']{
     --text-color: black;
     --color: black;
     --cursor-effect-color: radial-gradient(circle, rgba(71, 71, 71, 0.4), transparent, transparent);
-    
-    
+    --scroll: #dddddd;
+    --scroll-bar: white;
+    --scroll-bar-hover: #a6a6a6;
+
+
 }
 
 

@@ -9,11 +9,13 @@ import {Link} from "react-router-dom";
 import {ReactNode, useState} from "react";
 
 import { FaCopy } from "react-icons/fa6";
+import {useTranslation} from "react-i18next";
 
 
 
 const Contacts = () => {
     const [copy, setCopy] = useState(false);
+    const {t} = useTranslation();
 
     const copyTextToClipboard = async (text: string) => {
         try {
@@ -53,9 +55,9 @@ const Contacts = () => {
             <div className='text-[clamp(24px,3vw,40px)]  font-extrabold text-center'>
                 <span className='text-[#c778dd]'># </span>
                 <h2 className=' before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
-                    contacts</h2>
+                    {t("contacts.title")}</h2>
             </div>
-            <div className='flex justify-center flex-wrap pt-[100px] gap-[80px] px-[20px]'>
+            <div className='flex justify-center flex-wrap pt-[100px] gap-[40px] md:gap-[80px] px-[20px]'>
                 {MyContacts.map((item, index) => (
                     <>
                         {item.link ? <Link target='_blank' className='hover:text-[black] duration-150' key={index} to={item.link}>{item.icon}</Link> :
@@ -66,8 +68,6 @@ const Contacts = () => {
                                     <span className='text-ellipsis  overflow-hidden flex items-center gap-[3px]'>{item.copy} <FaCopy size='10px'/>  </span>}
                                 </div>
                             </div>
-
-
                         }
                        
                     </>

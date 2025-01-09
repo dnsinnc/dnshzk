@@ -6,7 +6,11 @@ import { CgWebsite } from "react-icons/cg";
 
 import {TechCard} from "../../Shared/UI/TechCard.tsx";
 import { motion } from "framer-motion";
+import {useTranslation} from "react-i18next";
+
 function MySkills() {
+    
+    const {t} = useTranslation();
     return (
             <div
                 
@@ -15,7 +19,7 @@ function MySkills() {
                     <span className='text-[#c778dd]'># </span>
                     <h1
                         className='before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
-                        my skills</h1>
+                        {t("skills.title")}</h1>
                 </div>
                 <div className='pt-[100px]  flex-wrap  justify-center flex gap-[40px] items-center'>
                     <TechCard image={<CgWebsite size={'40px'}/>} 
@@ -37,7 +41,7 @@ function MySkills() {
                         className="skills-info">
                         <div className=' h-full w-[4px] mr-[20px] bg-[gray]'></div>
                         <div>
-                            <h3>I've had experiences with</h3>
+                            <h3>{t("skills.exp")}</h3>
                             <ul>
                                 <li>Git: version control, branching, merging, and conflict resolution</li>
                                 <li>Docker, Postman</li>
@@ -58,7 +62,7 @@ function MySkills() {
                         className="skills-info">
                         <div className='h-full w-[2px] mr-[20px] bg-[gray]'></div>
                         <div>
-                            <h3>I have years of experience with</h3>
+                            <h3>{t("skills.years-exp")}</h3>
                             <ul>
                                 <li>HTML, CSS (flex, grid layout)</li>
                                 <li>TypeScript, React, Vite</li>
@@ -79,7 +83,7 @@ function MySkills() {
                         <div className='h-full w-[2px] mr-[20px] bg-[gray]'></div>
                         
                         <div>
-                            <h3>I work and study about</h3>
+                            <h3>{t("skills.study")}</h3>
                             <ul>
                                 <li>UI/UX design principles</li>
                                 <li>BEM, FSD (architecture)</li>

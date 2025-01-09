@@ -5,13 +5,15 @@ import portf from './dashboards/portf.png'
 
 import {Link} from "react-router-dom";
 import { motion } from 'framer-motion';
+import {useTranslation} from "react-i18next";
 const Projects = () => {
+    const {t} = useTranslation();
 
 
     const projects = [
         {
             title: "Leave Hosting",
-            description: "A commercial project for ordering hosting, multi-page with localization and adaptive.",
+            description: t("projects.description.LH"),
             technologies: ["React", "Tailwind CSS"],
             liveDemo: "https://leavehosting.com/",
             github: null, 
@@ -21,7 +23,7 @@ const Projects = () => {
       
         {
             title: "Ecommerce",
-            description: "A multi-page online store using a freely available api, with authentication and your own account. (Still under development)",
+            description: t("projects.description.ecomm"),
             technologies: ["React", "Redux Toolkit","FakeApi", "FireBase", "TypeScript", "Tailwind CSS"],
             liveDemo: "https://dnsinnc.github.io/market/",
             github: "https://github.com/dnsinnc/market",
@@ -30,7 +32,7 @@ const Projects = () => {
         },
         {
             title: "Portfolio",
-            description: "My personal web-portfolio",
+            description: t("projects.description.portfolio"),
             technologies: ["React","TypeScript", "Tailwind CSS"],
             liveDemo: "/",
             github: null,
@@ -39,7 +41,7 @@ const Projects = () => {
         },
         {
             title: "Vision Capital",
-            description: "Simple landing. My first experience with Tailwind CSS",
+            description: t("projects.description.vis-cap"),
             technologies: ["HTML/CSS","JavaScript", "Tailwind CSS"],
             liveDemo: "https://dnsinnc.github.io/vision-capital/",
             github: "https://github.com/dnsinnc/vision-capital",
@@ -59,10 +61,10 @@ const Projects = () => {
             <div className='text-[clamp(24px,3vw,40px)]  font-extrabold text-right '>
                 <span className='text-[#c778dd]'># </span>
                 <h2 className=' before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
-                    projects</h2>
+                    {t("projects.titles.title")}</h2>
             </div>
             <div className='pt-[120px]  '>
-                <h2 className='text-[clamp(20px,3vw,26px)] font-bold text-center'>My personal</h2>
+                <h2 className='text-[clamp(20px,3vw,26px)] font-bold text-center'>{t("projects.titles.personal")}</h2>
                 <motion.div
                    
                     className='flex gap-[50px] pt-[30px] flex-wrap justify-center'>
@@ -71,7 +73,7 @@ const Projects = () => {
                             initial={{ opacity: 0,}} // Початковий стан
                             whileInView={{ opacity: 1, x: 0 }} // Стан після потрапляння у в'юпорт
                             transition={{ duration: 0.4 * index  }} // Тривалість анімації
-                            className="w-[500px] bg-white/10 flex flex-col justify-between backdrop-blur shadow-lg rounded-lg p-4 ">
+                            className="max-w-[500px] bg-white/10 flex flex-col justify-between backdrop-blur shadow-lg rounded-lg p-4 ">
                             <div>
                                 <div className='flex items-center h-[270px] '>
                                     <img src={project.image} alt="Project Screenshot"
@@ -99,7 +101,7 @@ const Projects = () => {
 
                 </motion.div>
 
-                <h2 className='text-[clamp(20px,3vw,26px)] font-bold pt-[100px] text-center'>For clients</h2>
+                <h2 className='text-[clamp(20px,3vw,26px)] font-bold pt-[100px] text-center'>{t("projects.titles.comm")}</h2>
                 <motion.div
                    
                     className='flex justify-center flex-wrap gap-[50px] pt-[30px]'>

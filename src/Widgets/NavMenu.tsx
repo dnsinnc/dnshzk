@@ -1,63 +1,98 @@
-﻿import {useEffect, useState} from "react";
+﻿import {useEffect, useRef, useState} from "react";
+
+// @ts-ignore
 import {Link} from "react-scroll";
-import { IoIosMoon } from "react-icons/io";
 
-import { IoMdSunny } from "react-icons/io";
 
-import {useTheme} from "../utils/hooks/useTheme.ts";
+import {useTranslation} from "react-i18next";
+
 
 
 function NavMenu({activeSection}: {activeSection: string}) {
+    
+    const {t} = useTranslation();
+    
     const [active, setActive] = useState<string>('home')
     const [openBurger, setOpenBurger] = useState(false);
-    const [theme, setTheme] = useTheme();
+ 
+    const menuRef = useRef<HTMLDivElement | null>(null)
+    
+    const navLinks = [
+        { to: 'home', label:  t("navmenu.home")},
+        { to: 'my-skills', label: t("navmenu.my-skills")},
+        { to: 'about-me', label: t("navmenu.about-me")},
+        { to: 'projects', label: t("navmenu.projects")},
+        { to: 'contacts', label: t("navmenu.contacts")},
+    ];
 
 
-    const handleChangeDarkTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-        console.log(theme)
+
+
+ 
+    const toggleOpenMenu  = () =>{
+        setOpenBurger((prev) => !prev);
     }
 
-    useEffect(() => {
-        setActive(activeSection)
-        console.log(activeSection)
-    },[activeSection])
+    const handleClickOutside = (event: MouseEvent) => {
+        if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+            setOpenBurger(false);
+        }
+    };
 
-    const navLinks = [
-        { to: 'home', label:  'home'},
-        { to: 'my-skills', label: 'my skills'},
-        { to: 'about-me', label: "about me"},
-        { to: 'projects', label: 'projects'},
-        { to: 'contacts', label: 'contacts'},
-    ];
+
+    
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
+
+
+    useEffect(() => {
+        setTimeout(()=> {
+            setOpenBurger(false);
+        }, 600)
+    }, [active]);
+
+    
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if (activeSection !== active) {
+                setActive(activeSection);
+            }
+        }, 600);
+
+        return () => clearTimeout(timeout);
+    },[activeSection, active])
+    
+    
+
     return (
-        <div className='flex gap-[20px] items-center justify-center'>
+        <div onClick={(e)=> handleClickOutside(e)} className='flex  gap-[20px]  justify-center'>
             <div className='hidden md:flex  h-full items-center gap-8'>
                 <div className=''>
                     <nav className='flex gap-[30px]  '>
                         {navLinks.map((link, index) => (
                             <Link key={index} to={link.to}
                                   smooth={true}
-                                  duration={500} onClick={() => setActive(link.label)}
-                                  className={`cursor-pointer lg:text-[16px] text-[12px]  ${link.label === active ? 'active' : " "}`}>{link.label}</Link>
+                                  duration={500} onClick={() => setActive(link.to)}
+                                  className={`cursor-pointer lg:text-[16px] text-[12px]  ${link.to === active ? 'active' : " "}`}>{link.label}</Link>
                         ))}
                     </nav>
                 </div>
 
             </div>
-
-            <div onClick={handleChangeDarkTheme}
-                 className='w-[40px] bg-gray-400 backdrop-blur  relative h-[20px] rounded-full shadow-2xl'>
-                <div
-                    className={` ${theme === 'dark' ? 'translate-x-[100%] text-gray-500' : 'translate-x-0 text-yellow-500'} flex items-center justify-center shadow-2xl absolute h-full duration-200 w-[20px] bg-white rounded-full`}>
-                    {theme === 'dark' ? <IoIosMoon/> : <IoMdSunny/>}
-                </div>
-
-            </div>
-            <div
+            
+            
+          
+                
+            
+         
+            <div ref={menuRef} 
                 className='md:hidden relative  bg-white/10  backdrop-blur shadow-lg top-0  flex flex-end'>
                 <div className='relative h-full right-[10px] items-center z-[100]   '>
-                    <div onClick={() => setOpenBurger(!openBurger)} className={`menubg h-[15px]
+                    <div onClick={toggleOpenMenu} className={`menubg h-[15px]
                                 ${openBurger ? ' after:rotate-[45deg] before:-top-[6px] before:-rotate-[45deg]   ' : ''}
                             `}>
                                 <span className={` 
@@ -69,16 +104,18 @@ function NavMenu({activeSection}: {activeSection: string}) {
 
                 <div className={`${openBurger
                     ? "-translate-x-[80%]"
-                    : "translate-x-[200%]"} duration-300 absolute z-40 flex rounded-bl-[10px]  bg-white/30  backdrop-blur-md shadow-lg left-[20px] py-[20px] w-[100px]  top-[37px] `}>
+                    : "translate-x-[200%]"} duration-300 absolute z-40 flex rounded-bl-[10px]  bg-white/30  
+                    backdrop-blur-md shadow-lg left-[20px] py-[20px] w-[100px] justify-center top-[37px] `}>
 
-                    <nav className='flex justify-center flex-col  text-right px-[10px] gap-[20px]'>
+                    <nav className='flex justify-center flex-col  text-right items-center gap-[20px]'>
                         {navLinks.map((link, index) => (
                             <Link
+                                
                                 key={index}
                                 to={link.to}
                                 smooth={true}
                                 duration={500}
-                                onClick={() => setActive(link.label)}
+                                onClick={() => setActive(link.to)}
                                 style={{
                                     transitionDelay: `${index * 100}ms`,
                                 }}
@@ -87,7 +124,7 @@ function NavMenu({activeSection}: {activeSection: string}) {
                                         ? `translate-x-0 `
                                         : "translate-x-[200%]"
                                 } cursor-pointer duration-500 lg:text-[16px] text-[12px] ${
-                                    link.label === active ? "active" : ""
+                                    link.to === active ? "active" : ""
                                 }`}
                             >
                                 {link.label}

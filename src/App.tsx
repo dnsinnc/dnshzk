@@ -5,7 +5,7 @@ const App: React.FC = () => {
     const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
     // Обробник для оновлення координат курсора
-    const cursor = (e: MouseEvent) => {
+    const cursor = (e: React.MouseEvent<HTMLDivElement>) => {
         setCursorPos({
             x: e.pageX, // X-координата курсора
             y: e.pageY, // Y-координата курсора
