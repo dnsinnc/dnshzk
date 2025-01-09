@@ -29,6 +29,7 @@ const Header = ({activeSection}:{activeSection: string}) => {
         }
     };
     
+   
     return (
         <header  className='header'>
             <div className='container  items-center h-full flex justify-between'>
@@ -39,7 +40,7 @@ const Header = ({activeSection}:{activeSection: string}) => {
                     <div   className='relative flex items-center h-[24px] '>
 
                         <NavMenu activeSection={activeSection}></NavMenu>
-
+                        {/*@ts-ignore*/}
                             <div ref={settingRef} onClick={(e)=> handleClickOutside(e)}
                                 className={`duration-[500ms] absolute top-0 right-[30px] md:-right-[70px] 
                                 ${openSettings ? " h-[200px]" : 'h-[24px]'} flex flex-col items-center ] overflow-hidden`}>

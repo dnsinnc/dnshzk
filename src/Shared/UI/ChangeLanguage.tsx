@@ -1,4 +1,4 @@
-﻿import {useEffect, useRef, useState} from "react";
+﻿import { useState} from "react";
 import uk from './images/uaFlag.png'
 import en from "./images/enFlag.png"
 import pl from "./images/plFlag.png"
@@ -49,7 +49,7 @@ const ChangeLanguage = () => {
 
 
         // функція для зміни мови
-        const selectLang = (lang) => {
+        const selectLang = (lang: any) => {
             setSelectedLanguage(lang.flag)
             setOpenMenu(false)
             i18n.changeLanguage(lang.tag);

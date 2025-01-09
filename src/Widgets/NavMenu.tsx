@@ -68,7 +68,9 @@ function NavMenu({activeSection}: {activeSection: string}) {
     
     
 
+   
     return (
+        // @ts-ignore
         <div onClick={(e)=> handleClickOutside(e)} className='flex  gap-[20px]  justify-center'>
             <div className='hidden md:flex  h-full items-center gap-8'>
                 <div className=''>
