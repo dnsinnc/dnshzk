@@ -14,7 +14,7 @@ i18n
             escapeValue: false,
         },
         backend: {
-            loadPath: '/locales/{{lng}}/translation.json',
+            loadPath: 'dnshzk/locales/{{lng}}/translation.json',
         },
         react: {
             useSuspense: true,
