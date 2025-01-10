@@ -14,10 +14,10 @@ i18n
             escapeValue: false,
         },
         backend: {
-            loadPath: 'dnshzk/locales/{{lng}}/translation.json',
+            loadPath: '/dnshzk/locales/{{lng}}/translation.json',
         },
         react: {
-            useSuspense: true,
+            useSuspense: false,
         },
         detection: {
 
