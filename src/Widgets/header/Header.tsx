@@ -43,13 +43,12 @@ const Header = ({activeSection}:{activeSection: string}) => {
                         {/*@ts-ignore*/}
                             <div ref={settingRef} onClick={(e)=> handleClickOutside(e)}
                                 className={`duration-[500ms] absolute top-0 right-[30px] md:-right-[70px] 
-                                ${openSettings ? " h-[200px]" : 'h-[24px]'} flex flex-col items-center ] overflow-hidden`}>
+                                ${openSettings ? " h-[200px] " : 'opacity-[0.5] h-[24px]'} flex flex-col items-center ] overflow-hidden`}>
                                 <div className='-translate-x-[40%]' onClick={() => setOpenSettings(!openSettings)}>
-                                    <IoMdSettings size={'24px'}/>
+                                    <div className={`${openSettings ? 'rotate-180' : "rotate-0"} duration-300`}><IoMdSettings size={'24px'}/></div>
                                 </div>
                                 <div className='flex w-[60px] flex-col pt-[20px] gap-[10px] items-start justify-center'>
                                     <ChangeTheme/>
-
                                     <ChangeLanguage/>
                                 </div>
                             </div>

@@ -79,8 +79,8 @@ const ChangeLanguage = () => {
                     <div className='flex absolute left-0 top-[30px] flex-col gap-[10px]  '>
                         {
                             languageData.filter((lang) => lang.flag !== selectedLanguage).map((lang, i) => (
-                                <div key={i} onClick={() => selectLang(lang)}
-                                     className={`cursor-pointer`}>
+                                <div  key={i} onClick={() => selectLang(lang)}
+                                     className={`cursor-pointer ${openMenu ? 'opacity-100' : 'opacity-0' } duration-300`}>
                                         <img alt={lang.flag} className='w-[40px] h-[22px] duration-150 hover:scale-110 rounded-[5px]'
                                              src={lang.flag}/>
                                     

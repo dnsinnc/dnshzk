@@ -5,7 +5,7 @@
     "my-skills": "moje umiejętności",
     "about-me": "o mnie",
     "projects": "projekty",
-    "contacts": "kontakt"
+    "contacts": "kontakty"
   },
   "main": {
     "name": "Denys to",
@@ -25,11 +25,11 @@
 
     "text": {
       "first": {
-        "part1": " Pasjonuję się projektowaniem dostępnych i perfekcyjnych interfejsów użytkownika. Obecnie aktywnie praktykuję, rozwijając własne projekty na moim ",
-        "part2": "oraz uczestnicząc w projektach komercyjnych. Tworzę i utrzymuję komponenty front-endowe, które zapewniają płynne działanie platformy, uwzględniając standardy dostępności internetowej."
+        "part1": "Pasjonuję się projektowaniem dostępnych i perfekcyjnych interfejsów użytkownika. Obecnie aktywnie praktykuję, rozwijając własne projekty na moim ",
+        "part2": " oraz uczestnicząc w projektach komercyjnych. Tworzę i utrzymuję komponenty front-endowe, które zapewniają płynne działanie platformy, uwzględniając standardy dostępności internetowej."
       },
-      "second": " Moja przygoda z front-endem rozpoczęła się w 2022 roku i od tamtej pory aktywnie rozwijam swoje umiejętności samodzielnie.",
-      "third": " W wolnym czasie uczę się języków angielskiego i polskiego, uwielbiam czytać książki i nieustannie doskonalę swoje umiejętności w zakresie front-end developmentu, co sprawia mi ogromną radość. Cały czas słucham też muzyki."
+      "second": "Moja przygoda z front-endem rozpoczęła się w 2022 roku i od tamtej pory aktywnie rozwijam swoje umiejętności samodzielnie.",
+      "third": "W wolnym czasie uczę się języków angielskiego i polskiego, uwielbiam czytać książki i nieustannie doskonalę swoje umiejętności w zakresie front-end developmentu, co sprawia mi ogromną radość. Cały czas słucham też muzyki."
     }
   },
   "projects": {
@@ -47,6 +47,6 @@
     "liveDemo": "Demo na żywo"
   },
   "contacts": {
-    "title": "kontakt"
+    "title": "kontakty"
   }
 }

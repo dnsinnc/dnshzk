@@ -8,200 +8,6 @@
 @tailwind utilities;
 
 
-
-body{
-    overflow-x: hidden;
-    font-family: 'Manrope', sans-serif;
-    color: var(--color);
-    background: var(--background-color);
-    transition: background-color 200ms linear, border-color 200ms linear;
-}
-
-body::-webkit-scrollbar {
-    width: 10px; /* Ширина скролу */
-    
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--scroll-bar); 
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--scroll); 
-    border: 2px solid var(--scroll); 
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scroll-bar-hover); 
-    border: 2px solid var(--scroll-bar-hover);
-}
-
-
-
-.header{
-   @apply fixed px-[20px] top-0 left-0 w-full h-[60px]  bg-white/10 backdrop-blur-md shadow-lg z-50
-}  
-
-.page {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
-.container{
-    @apply max-w-[1540px] m-auto md:px-[60px] px-[20px] xl:px-[100px]   ; 
-}
-.section{
-    @apply xl:pb-[300px] pt-[80px] flex items-center pb-[100px] w-full  ;
-}
-
-
-
-.typed-out{
-    @apply overflow-hidden  border-solid border-r-[4px] border-[--line-color] whitespace-nowrap  w-0;
-    
-    animation:
-            typing 10s steps(27, end) infinite;
-}
-@keyframes typing {
-    0% { width: 0 }
-    50% { width: 100% }
-    65% { width: 100% }
-    80% { width: 0 }
-    100% { width: 0 }
-    
-}
-.active{
-    @apply relative font-bold;
-    
-    
-}
-.active:before{
-    content: '';
-    animation: showing 1s forwards;
-    background-color: var(--line-color);
-    @apply absolute  -bottom-[3px]  h-[3px] ;
-}
-@keyframes showing {
-    0% { 
-        opacity: 0;
-        width: 0;
-    }
-    100% { 
-        width: 75%;
-        opacity: 1; }
-}
-
-
-
-.menubg::before, .menubg::after {
-    content: '';
-    background: var(--line-color); 
-    @apply rounded-lg w-[20px] duration-150 min-h-[3px] absolute;
-}
-
-.menubg::before {
-    margin-top: 12px;
-}
-
-.menubg::after {
-    margin-top: 6px;
-}
-
-.card {
-    position: relative;
-    overflow: hidden;
-}
-.card:before {
-    content: '';
-    position: absolute;
-    background: var(--cursor-effect-color);
-    width: 1500px;  
-    height: 1500px;
-    top: var(--y ) ;  
-    left: calc(var(--x)) ;  
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: -10;
-    opacity: 0;
-    @apply md:flex hidden
-}
-
-.card:hover:before{
-    opacity: 1;
-}
-@keyframes pulse {
-    0% {  transform: scale(1);  }
-    50% {
-        transform: scale(1.1); 
-    }
-    100% {  transform: scale(1);  }
-}
-
-.anim-pulse{
-    animation: pulse 2s infinite;
-}
-
-
-
-
-
-
-.skills-info{
-    @apply flex py-[20px] h-[auto] px-[20px] w-full md:max-w-[380px] hover:shadow-lg hover:scale-105 transition-transform duration-300;
-}
-
-
-
-.skills-info h3 {
-     @apply font-bold leading-tight pb-[20px]  text-[clamp(12px,3vw,18px)];
-}
-
-.skills-info ul {
-    list-style: none;
-  
-  
-}
-
-.skills-info ul li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-    color: gray;
-    @apply text-[clamp(10px,3vw,16px)];
-}
-
-
-
-
-.btn-live-demo {
-    @apply bg-white/10 duration-[200ms] backdrop-blur hover:text-white shadow-lg text-[--color] px-4 py-2 rounded hover:bg-blue-600/50;
-}
-.btn-github {
-    @apply bg-white/10 duration-[200ms] backdrop-blur  shadow-lg text-[--color] px-4 py-2 rounded;
-}
-.tech-badge {
-    @apply    backdrop-blur shadow-lg bg-gray-700 text-sm text-white px-2 py-1 rounded;
-}
-
-
-.contact-card {
-
-    @apply absolute bg-white/10 left-[50%] -translate-x-[50%] backdrop-blur shadow-lg top-10 py-1 px-2 opacity-0 transition-opacity duration-300 rounded;
-}
-
-.contact-card:hover {
-    @apply  opacity-100
-}
-.par:hover ~ .contact-card {
-    @apply opacity-100 transition-opacity duration-300;
-}
-.techCard{
-    @apply cursor-pointer  shadow-lg hover:scale-105 transition-transform duration-300 border rounded-[10px]
-    justify-center gap-[20px] px-[20px] py-[10px] items-center flex border-solid border-[gray] max-w-[300px] sm:max-w-[340px] h-[80px]
-}
-
-
-
 html[data-theme='dark']{
     --background-color: black;
     --line-color: white;
@@ -227,6 +33,188 @@ html[data-theme='light']{
 
 
 }
+
+
+body{
+    overflow-x: hidden;
+    font-family: 'Manrope', sans-serif;
+    color: var(--color);
+    background: var(--background-color);
+    transition: background-color 200ms linear, border-color 200ms linear;
+}
+
+/* scroll */
+
+body::-webkit-scrollbar {
+    width: 10px; /* Ширина скролу */
+
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-bar);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border: 2px solid var(--scroll);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-bar-hover);
+    border: 2px solid var(--scroll-bar-hover);
+}
+
+/* scroll */
+
+
+.header{
+   @apply fixed px-[20px] top-0 left-0 w-full h-[60px]  bg-white/10 backdrop-blur-md shadow-lg z-50
+}  
+
+
+
+.container{
+    @apply max-w-[1540px] m-auto md:px-[60px] px-[20px] xl:px-[100px]   ; 
+}
+.section{
+    @apply xl:pb-[300px] pt-[80px] flex items-center pb-[100px] w-full  ;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+.typed-out{
+    @apply overflow-hidden  border-solid border-r-[4px] border-[--line-color] whitespace-nowrap  w-0;
+    animation:  typing 10s steps(27, end) infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    50% { width: 100% }
+    65% { width: 100% }
+    80% { width: 0 }
+    100% { width: 0 }
+    
+}
+
+.active{
+    @apply relative font-bold;
+}
+.active:before{
+    content: '';
+    animation: showing 1s forwards;
+    background-color: var(--line-color);
+    @apply absolute  -bottom-[3px]  h-[3px] ;
+}
+
+@keyframes showing {
+    0% { 
+        opacity: 0;
+        width: 0;
+    }
+    100% { 
+        width: 75%;
+        opacity: 1; }
+}
+
+
+/* burger menu */
+
+.menubg::before, .menubg::after {
+    content: '';
+    background: var(--line-color); 
+    @apply rounded-lg w-[20px] duration-150 min-h-[3px] absolute;
+}
+
+.menubg::before {
+    margin-top: 12px;
+}
+
+.menubg::after {
+    margin-top: 6px;
+}
+
+/* burger menu */
+
+.cursor-effect {
+    position: relative;
+    overflow: hidden;
+}
+.cursor-effect:before {
+    content: '';
+    background: var(--cursor-effect-color);
+    top: var(--y ) ;
+    left: calc(var(--x)) ;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    @apply md:flex hidden opacity-0 -z-[10] h-[1500px] w-[1500px] absolute;
+}
+
+.cursor-effect:hover:before{
+    opacity: 1;
+}
+
+
+
+/*skills card*/
+
+.skills-info{
+    @apply flex py-[20px] h-[auto] px-[20px] w-full md:max-w-[380px] hover:shadow-lg hover:scale-105 transition-transform duration-300;
+}
+
+.skills-info h3 {
+     @apply font-bold leading-tight pb-[20px]  text-[clamp(12px,3vw,18px)];
+}
+
+.skills-info ul {
+    list-style: none;
+}
+
+.skills-info ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: gray;
+    @apply text-[clamp(10px,3vw,16px)];
+}
+
+/*skills card*/
+
+
+.btn-live-demo {
+    @apply bg-white/10 duration-[200ms] backdrop-blur hover:text-white shadow-lg text-[--color] px-4 py-2 rounded hover:bg-blue-600/50;
+}
+.btn-github {
+    @apply bg-white/10 duration-[200ms] backdrop-blur  shadow-lg text-[--color] px-4 py-2 rounded;
+}
+.tech-badge {
+    @apply    backdrop-blur shadow-lg bg-[--background-color/20] text-[--color] text-sm px-2 py-1 rounded;
+}
+
+.contact-card {
+    @apply absolute bg-white/10 left-[50%] -translate-x-[50%] backdrop-blur shadow-lg top-10 py-1 px-2 opacity-0 transition-opacity duration-300 rounded;
+}
+
+.contact-card:hover {
+    @apply  opacity-100
+}
+
+.card-not-copy:hover ~ .contact-card {
+    @apply opacity-100 transition-opacity duration-300;
+}
+
+.techCard{
+    @apply cursor-pointer  shadow-lg hover:scale-105 transition-transform duration-300 border rounded-[10px]
+    justify-center gap-[20px] px-[20px] py-[10px] items-center flex border-solid border-[gray] max-w-[300px] sm:max-w-[340px] h-[80px]
+}
+
+
+
+
 
 
 

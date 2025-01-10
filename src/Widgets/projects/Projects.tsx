@@ -91,7 +91,7 @@ const Projects = () => {
 
                             </div>
                             <div className="mt-4 flex justify-between">
-                            <Link target="_blank" className="btn-live-demo" to={project.liveDemo}>Live Demo</Link>
+                            <Link target="_blank" className="btn-live-demo" to={project.liveDemo}>{t('projects.liveDemo')}</Link>
                                 {project.github ?
                                     <Link target="_blank" to={project.github} className="hover:text-white btn-github hover:bg-gray-800">GitHub</Link> :
                                     <div className="btn-github cursor-pointer opacity-20">GitHub</div>}
@@ -130,7 +130,7 @@ const Projects = () => {
 
                             </div>
                             <div className="mt-4 flex justify-between">
-                                <Link target="_blank" className="btn-live-demo" to={project.liveDemo}>Live Demo</Link>
+                                <Link target="_blank" className="btn-live-demo" to={project.liveDemo}>{t('projects.liveDemo')}</Link>
                                 {project.github ?
                                     <Link target="_blank" to={project.github}
                                           className="btn-github hover:text-white hover:bg-gray-800">GitHub</Link> :

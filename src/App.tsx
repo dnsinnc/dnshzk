@@ -19,7 +19,7 @@ const App: React.FC = () => {
     } as React.CSSProperties;
 
     return (
-        <div className="card" onMouseMove={(e) => cursor(e)} style={customStyle}>
+        <div className="cursor-effect" onMouseMove={(e) => cursor(e)} style={customStyle}>
             <Main/>
         </div>
     );

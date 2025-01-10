@@ -62,7 +62,7 @@ const Contacts = () => {
                     <>
                         {item.link ? <Link target='_blank' className='hover:text-[black] duration-150' key={index} to={item.link}>{item.icon}</Link> :
                             <div className='relative cursor-pointer'>
-                                <div  onClick={() => copyTextToClipboard(item.copy ? item.copy : '')} className='relative par hover:text-[black] duration-150' key={index}> {item.icon}</div>
+                                <div  onClick={() => copyTextToClipboard(item.copy ? item.copy : '')} className='relative card-not-copy hover:text-[black] duration-150' key={index}> {item.icon}</div>
                                 <div
                                   onClick={() => copyTextToClipboard(item.copy ? item.copy : '')}  className='text-[12px]  contact-card duration-150'>{copy ? 'Copied!' : 
                                     <span className='text-ellipsis  overflow-hidden flex items-center gap-[3px]'>{item.copy} <FaCopy size='10px'/>  </span>}
