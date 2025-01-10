@@ -21,7 +21,7 @@ function MySkills() {
                         className='before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
                         {t("skills.title")}</h1>
                 </div>
-                <div className='pt-[100px]  flex-wrap  justify-center flex gap-[40px] items-center'>
+                <div className='pt-[100px] w-full flex-wrap  justify-center  flex gap-[40px] items-center'>
                     <TechCard image={<CgWebsite size={'40px'}/>} 
                               title="HTML & CSS" 
                               subtitle='Responsive websites with fast loading.'/>

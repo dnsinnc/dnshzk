@@ -107,7 +107,7 @@ function NavMenu({activeSection}: {activeSection: string}) {
                 <div className={`${openBurger
                     ? "-translate-x-[80%]"
                     : "translate-x-[200%]"} duration-300 absolute z-40 flex rounded-bl-[10px]  bg-white/30  
-                    backdrop-blur-md shadow-lg left-[20px] py-[20px] w-[100px] justify-center top-[37px] `}>
+                    backdrop-blur-md shadow-lg left-[20px] py-[20px] w-[120px] justify-center top-[37px] `}>
 
                     <nav className='flex justify-center flex-col  text-right items-center gap-[20px]'>
                         {navLinks.map((link, index) => (

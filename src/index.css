@@ -197,7 +197,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .techCard{
     @apply cursor-pointer  shadow-lg hover:scale-105 transition-transform duration-300 border rounded-[10px]
-    justify-center gap-[20px] px-[20px] py-[10px] items-center flex border-solid border-[gray] max-w-[340px] h-[80px]
+    justify-center gap-[20px] px-[20px] py-[10px] items-center flex border-solid border-[gray] max-w-[300px] sm:max-w-[340px] h-[80px]
 }
 
 
