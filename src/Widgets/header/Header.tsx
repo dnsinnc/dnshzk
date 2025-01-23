@@ -35,7 +35,7 @@ const Header = ({activeSection}:{activeSection: string}) => {
             <div className='container  items-center h-full flex justify-between'>
                 <div
                     className='text-[clamp(24px,3vw,30px)] font-extrabold '>
-                    <h1 className='font-extrabold'>dnshzk.</h1>
+                    <h1 className="gradientViolet">dnshzk.</h1>
                 </div>
                     <div   className='relative flex items-center h-[24px] '>
 

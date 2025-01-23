@@ -16,7 +16,7 @@ function MySkills() {
                 
                 className='w-full'>
                 <div className=' text-[clamp(24px,3vw,40px)] w-full pl-[40px] font-extrabold text-right '>
-                    <span className='text-[#c778dd]'># </span>
+                    <span className='gradientViolet'># </span>
                     <h1
                         className='before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
                         {t("skills.title")}</h1>
@@ -31,13 +31,13 @@ function MySkills() {
                 <motion.div
                     initial="hidden"
                     animate="visible"
-                    className='flex justify-center flex-wrap gap-[20px] pt-[40px] md:pt-[160px]'>
+                    className='flex justify-center  flex-wrap gap-[40px] pt-[40px] md:pt-[160px]'>
 
                     <motion.div
-                        initial={{ opacity: 0 }} // Початковий стан
-                        whileInView={{ opacity: 1, x: 0 }} // Стан після потрапляння у в'юпорт
-                        transition={{ duration: 1 }} // Тривалість анімації
-                        viewport={{ once: false }}
+                        initial={{opacity: 0}} // Початковий стан
+                        whileInView={{opacity: 1, x: 0}} // Стан після потрапляння у в'юпорт
+                        transition={{duration: 1}} // Тривалість анімації
+                        viewport={{once: false}}
                         className="skills-info">
                         <div className=' h-full w-[4px] mr-[20px] bg-[gray]'></div>
                         <div>
@@ -49,16 +49,18 @@ function MySkills() {
                                 <li>API integration</li>
                                 <li>Performance optimization</li>
                                 <li>Testing and debugging</li>
+                                <li>UI/UX design principles</li>
+                                <li>BEM, FSD (architecture)</li>
                             </ul>
                         </div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0,  }} // Початковий стан
-                        whileInView={{ opacity: 1, }} // Стан після потрапляння у в'юпорт
-                        transition={{ duration: 1 }} // Тривалість анімації
-                        viewport={{ once: false }}
-                        
+                        initial={{opacity: 0,}} // Початковий стан
+                        whileInView={{opacity: 1,}} // Стан після потрапляння у в'юпорт
+                        transition={{duration: 1}} // Тривалість анімації
+                        viewport={{once: false}}
+
                         className="skills-info">
                         <div className='h-full w-[2px] mr-[20px] bg-[gray]'></div>
                         <div>
@@ -73,24 +75,24 @@ function MySkills() {
                             </ul>
                         </div>
                     </motion.div>
-
                     <motion.div
-                        initial={{ opacity: 0}} // Початковий стан
-                        whileInView={{ opacity: 1, x: 0 }} // Стан після потрапляння у в'юпорт
-                        transition={{ duration: 1 }} // Тривалість анімації
-                        viewport={{ once: false }}
-                        className="skills-info">
+                        initial={{opacity: 0}} // Початковий стан
+                        whileInView={{opacity: 1, x: 0}} // Стан після потрапляння у в'юпорт
+                        transition={{duration: 1}} // Тривалість анімації
+                        viewport={{once: false}}
+                        className=" skills-info">
                         <div className='h-full w-[2px] mr-[20px] bg-[gray]'></div>
-                        
+
                         <div>
-                            <h3>{t("skills.study")}</h3>
+                            <h3>{t("skills.lang")}</h3>
                             <ul>
-                                <li>UI/UX design principles</li>
-                                <li>BEM, FSD (architecture)</li>
+                                <li>Ukrainian: Native</li>
+                                <li>Russian: Fluent</li>
+                                <li>English: A2 (learning to improve)</li>
+                                <li>Polish: A1 (learning to improve)</li>
                             </ul>
                         </div>
                     </motion.div>
-
                 </motion.div>
 
 

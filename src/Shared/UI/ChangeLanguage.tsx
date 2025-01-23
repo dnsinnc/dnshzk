@@ -1,6 +1,8 @@
 ﻿import { useState} from "react";
 import uk from './images/uaFlag.png'
 import en from "./images/enFlag.png"
+import ru from "./images/ruFlag.avif"
+
 import pl from "./images/plFlag.png"
 import i18n from "i18next";
 import { BsCaretDownFill } from "react-icons/bs";
@@ -20,6 +22,10 @@ const ChangeLanguage = () => {
                 return uk;
             case 'pl':
                 return pl;
+            case 'ru':
+                return ru;
+            default: return en;
+
 
         }
     }
@@ -40,6 +46,8 @@ const ChangeLanguage = () => {
             {flag: uk, tag: 'uk'},
             {flag: en, tag: 'en'},
             {flag: pl, tag: 'pl'},
+            {flag: ru, tag: 'ru'},
+            
         ]
 
 
@@ -64,7 +72,7 @@ const ChangeLanguage = () => {
 
 
         return (
-            <div className={`${openMenu ? "h-[100px]" : 'h-[22px]' } w-full overflow-hidden right-0 duration-300  relative flex items-end flex-col  `}>
+            <div className={`${openMenu ? "h-[120px]" : 'h-[22px]' } w-full overflow-hidden right-0 duration-300  relative flex items-end flex-col  `}>
                 
                     <div className='w-full '  onClick={hui}
                     >

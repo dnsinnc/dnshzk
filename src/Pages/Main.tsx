@@ -76,7 +76,7 @@ function Main() {
                                 <div
                                     className='font-Manrope  font-extrabold'><span
                                     className='tracking-[3px] text-[clamp(30px,3vw,50px)]  spacing font-bold'>{t('main.name')}  </span>
-                                    <p className='font-firaCode typed-out whitespace-nowrap text-[#c778dd]'>front-end.web(developer)</p>
+                                    <p className='font-firaCode typed-out whitespace-nowrap gradientViolet'>front-end.web(developer)</p>
                                 </div>
                                 <p className='font-firaCode text-[clamp(10px,2vw,18px)]  text-[gray]'>{t('main.subtitle')}</p>
                             </div>

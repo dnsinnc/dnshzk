@@ -9,7 +9,7 @@ const AboutMe = () => {
     return (
             <div className='w-full'>
                 <div className='text-[clamp(24px,3vw,40px)]  font-extrabold text-left '>
-                    <span className='text-[#c778dd]'># </span>
+                    <span className=' gradientViolet'># </span>
                     <h2 className=' before:-bottom-[14px]  relative inline-block  before:absolute before:w-[70%] before:h-[7px] before:bg-[--line-color]'>
                         {t("about-me.title")}</h2>
                 </div>
